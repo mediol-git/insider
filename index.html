@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/fav.png" type="image/png">
+    <title>Бизнес игра The Insider</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans:300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <nav id="nav-menu phone" class="navigation col-md-9">
+                    <label for="mobileMenu"><img src="img/navbars.png" alt="кнопка меню" class="navbar-icon"></label>
+                    <p>8 (812) 123 45 67</p>
+                </nav>
+                <div class="callback col-md-3">
+                    <a href="tel:88121234567"><span>Заказать звонок</span></a><div><label for="phoneModal"><i class="fas fa-phone-alt"></i></label></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <input type="checkbox" id="mobileMenu">
+    <div id="menu">
+        <div class="container">
+            <div class="row menu-items">
+                <div class="col-md-3">
+                    <a href="#">
+                        <h3>Правила игры</h3>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <h3>Crown Club</h3>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <h3>Участники</h3>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <h3>Тарифы</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="phoneModal">
+    <div id="callModal">
+        <form id="call-form">
+            <div class="form-group">
+                <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+            </div>
+            <div class="form-group">
+                <input type="phone" class="form-control" id="phone" placeholder="Ваш телефон">
+            </div>
+            <button type="submit" class="btn btn-connect">Заказать звонок<img src="img/r-arrow.ico" type="icon" alt=""></button>
+        </form>
+    </div>
+    <div id="leftPanel">
+        <div class="logo">
+            <img src="img/insider.png" alt="">
+        </div>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <div id="rightPanel">
+        <p>Бизнес клуб <span>Crown club</span></p>
+    </div>
+    <div id="fullpage">
+        <section id="home" class="section">
+            <div class="container">
+                <h1>The <span>Бизнес игра</span>Insider</h1>
+            </div>
+            <div class="bottom-panel">
+                <form id="home-form">
+                    <div class="form-group">
+                        <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <input type="phone" class="form-control" id="phone" placeholder="Ваш телефон">
+                    </div>
+                    <button type="submit" class="btn btn-connect">Начать игру<img src="img/r-arrow.ico" type="icon" alt=""></button>
+                </form>
+            </div>
+        </section>
+        <section id="about" class="section">
+            <p class="section-label">Зачем тебе мы</p>
+            <div class="container">
+                <div class="row about-title">
+                    <h2>Кем бы ты ни был <br><span>становись лучше</span></h2>
+                </div>
+                <div class="row about-description">
+                    <p><span>𝐂𝐫𝐨𝐰𝐧 𝐂𝐥𝐮𝐛</span> - это уникальное бизнес-сообщество предпринимателей основано в 2005 году. Нас объединяет идея совместного развития в различных сферах, которые определяются нашими желаниями! <br>Только мы не просто бизнес-клуб, который вещает об успехе. Каждую неделю мы Вам показываем жизнь каждого участника в формате реалити-шоу. Мы достигаем целей вместе! А ещё любой может презентовать свой стартап и получить финансовую поддержку на развитие от нашего клуба. <br>Присоединяйся, сделай свою жизнь мечтой миллионов♦</p>
+                </div>
+            </div>
+        </section>
+        <section id="player" class="section">
+            <p class="section-label">Участники клуба</p>
+            <div class="container">
+                <div class="row people">
+                    <div class="col-md-4 player-photo boytcov">
+                        <img src="img/boytcov.jpg" alt="">
+                    </div>
+                    <div class="bottom-panel boytcov-desc">
+                        <div id="boytcov">
+                            <h3><span>Юрий Бойцов</span></h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio facere rerum perspiciatis enim praesentium esse eos iure voluptatum rem nisi repellat, blanditiis voluptas tenetur labore architecto nostrum vero. Cupiditate, ut?</p>
+                            <a href="#"><i class="fab fa-instagram"> boitsov_life</i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 player-photo djemma">
+                        <img src="img/djemma.jpg" alt="">
+                    </div>
+                    <div class="bottom-panel djemma-desc">
+                        <div id="djemma">
+                            <h3><span>Джемма Хачатрян</span></h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio facere rerum perspiciatis enim praesentium esse eos iure voluptatum rem nisi repellat, blanditiis voluptas tenetur labore architecto nostrum vero. Cupiditate, ut?</p>
+                            <a href="#"><i class="fab fa-instagram"> instagram_link</i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 player-photo taron">
+                        <img src="img/taron.jpg" alt="">
+                    </div>
+                    <div class="bottom-panel taron-desc">
+                        <div id="taron" class="">
+                            <h3><span>Тарон Седракян</span></h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio facere rerum perspiciatis enim praesentium esse eos iure voluptatum rem nisi repellat, blanditiis voluptas tenetur labore architecto nostrum vero. Cupiditate, ut?</p>
+                            <a href="#"><i class="fab fa-instagram"> instagram_link</i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 player-photo maloletov">
+                        <img src="img/maloletov.jpg" alt="">
+                    </div>
+                    <div class="bottom-panel maloletov-desc">
+                        <div id="maloletov" class="">
+                            <h3><span>Денис Малолетов</span></h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio facere rerum perspiciatis enim praesentium esse eos iure voluptatum rem nisi repellat, blanditiis voluptas tenetur labore architecto nostrum vero. Cupiditate, ut?</p>
+                            <a href="#"><i class="fab fa-instagram"> instagram_link</i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 player-photo skobeyko">
+                        <img src="img/skobeyko.jpg" alt="">
+                    </div>
+                    <div class="bottom-panel skobeyko-desc">
+                        <div id="skobeyko" class="">
+                            <h3><span>Екатерина Скобейко</span></h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio facere rerum perspiciatis enim praesentium esse eos iure voluptatum rem nisi repellat, blanditiis voluptas tenetur labore architecto nostrum vero. Cupiditate, ut?</p>
+                            <a href="#"><i class="fab fa-instagram"> instagram_link</i></a>
+                        </div>
+                    </div>
+                    <div class="bottom-panel">
+                        <form id="player-form">
+                            <div class="form-group">
+                                <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+                            </div>
+                            <div class="form-group">
+                                <input type="phone" class="form-control" id="phone" placeholder="Ваш телефон">
+                            </div>
+                            <button type="submit" class="btn btn-connect">Вступить в клуб <img src="img/r-arrow.ico" type="icon" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pricing" class="section">
+            <p class="section-label">Как к нам попасть</p>
+            <div class="container">
+                <div class="row price">
+                    <div class="col-md-4 price-item elite">
+                        <h2>Elite</h2>
+                        <div class="price-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab ipsa excepturi ut culpa minima, eveniet amet ea laborum sunt illum est soluta a ipsam cumque quisquam sint odit magni aliquam non quas? Facere nostrum ratione soluta. Illum a molestiae odit pariatur magni odio quas repellat!</p>
+                            <button class="btn btn-connect">Вступить в клуб<img src="img/r-arrow.ico" alt=""></button>
+                        </div>
+                        <h3>15 000 &#8381;</h3>
+                    </div>
+                    <div class="col-md-4 price-item vip">
+                        <h2>Vip</h2>
+                        <div class="price-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab ipsa excepturi ut culpa minima, eveniet amet ea laborum sunt illum est soluta a ipsam cumque quisquam sint odit magni aliquam non quas? Facere nostrum ratione soluta. Illum a molestiae odit pariatur magni odio quas repellat!</p>
+                            <button class="btn btn-connect">Вступить в клуб<img src="img/r-arrow.ico" alt=""></button>
+                        </div>
+                        <h3>21 000 &#8381;</h3>
+                    </div>
+                    <div class="col-md-4 price-item extra">
+                        <h2>Extra</h2>
+                        <div class="price-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab ipsa excepturi ut culpa minima, eveniet amet ea laborum sunt illum est soluta a ipsam cumque quisquam sint odit magni aliquam non quas? Facere nostrum ratione soluta. Illum a molestiae odit pariatur magni odio quas repellat!</p>
+                            <button class="btn btn-connect">Вступить в клуб<img src="img/r-arrow.ico" alt=""></button>
+                        </div>
+                        <h3>25 000 &#8381;</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="grafick" class="section">
+            <p class="section-label">График мероприятий</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 grafick-info">
+                        <span>1</span>
+                        <p class="data">06/08</p>
+                        <h3>Название мероприятия в две строчки</h3>
+                        <p class="invite">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, deserunt tenetur sequi impedit aperiam doloribus ipsum optio nesciunt molestias laudantium similique sed ex facere vitae temporibus commodi magni iste quo.</p>
+                    </div>
+                    <div class="col-md-6 grafick-info">
+                        <span>2</span>
+                        <p class="data">06/08</p>
+                        <h3>Название мероприятия в две строчки</h3>
+                        <p class="invite">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, deserunt tenetur sequi impedit aperiam doloribus ipsum optio nesciunt molestias laudantium similique sed ex facere vitae temporibus commodi magni iste quo.</p>
+                    </div>
+                    <div class="col-md-6 grafick-info">
+                        <span>3</span>
+                        <p class="data">06/08</p>
+                        <h3>Название мероприятия в две строчки</h3>
+                        <p class="invite">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, deserunt tenetur sequi impedit aperiam doloribus ipsum optio nesciunt molestias laudantium similique sed ex facere vitae temporibus commodi magni iste quo.</p>
+                    </div>
+                    <div class="col-md-6 grafick-info">
+                        <span>4</span>
+                        <p class="data">06/08</p>
+                        <h3>Название мероприятия в две строчки</h3>
+                        <p class="invite">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, deserunt tenetur sequi impedit aperiam doloribus ipsum optio nesciunt molestias laudantium similique sed ex facere vitae temporibus commodi magni iste quo.</p>
+                    </div>
+                    <div class="col-md-6 grafick-info">
+                        <span>5</span>
+                        <p class="data">06/08</p>
+                        <h3>Название мероприятия в две строчки</h3>
+                        <p class="invite">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, deserunt tenetur sequi impedit aperiam doloribus ipsum optio nesciunt molestias laudantium similique sed ex facere vitae temporibus commodi magni iste quo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-panel">
+                <form id="home-form">
+                    <div class="form-group">
+                        <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <input type="phone" class="form-control" id="phone" placeholder="Ваш телефон">
+                    </div>
+                    <button type="submit" class="btn btn-connect">Хочу на ивент<img src="img/r-arrow.ico" type="icon" alt=""></button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.easings.min.js"></script>
+    <script src="js/scrolloverflow.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage();
+        });  
+    </script>
+    <script src="https://kit.fontawesome.com/bfb0265f6e.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,571 @@
+@font-face {
+	font-family: 'Bruno Ace';
+	src: url('../fonts/bruno_ace.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/bruno_ace.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/bruno_ace.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/bruno_ace.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/bruno_ace.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/bruno_ace.svg#bruno_ace') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+$whiteColor: #fff;
+$blackColor: #333;
+$hoverColor: rgba(255,255,255, .7);
+$goldColor: #ffac30;
+$borderColor: rgba(255,255,255, .15);
+
+@mixin sectionBg ($imageBg) {
+    background-image: $imageBg;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin sectionTitle ($fontFam, $fontZ) {
+    font-family: $fontFam, sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: $fontZ;
+}
+
+@mixin bottomPanel {
+    background-color: $whiteColor;
+    position: absolute;
+    width: 620px;
+    height: 340px;
+    padding: 4% 5%;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin modal () {
+    position: fixed;
+    transition: 0.5s;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 88;
+    background-color: rgba(8,8,8, .9);
+}
+
+@mixin formStyle {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0, .15);
+    margin-bottom: 2.5em;
+    padding-left: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+@mixin button {
+    padding: 0.5em 0;
+    color: $goldColor;
+    text-transform: uppercase;
+    letter-spacing: 0.6em;
+}
+
+@mixin buttonImg {
+    width: 5em;
+    height: 1.2em;
+    padding-bottom: 0.4em;
+}
+
+@mixin gradientBorder {
+    border-left: 3px solid transparent;
+    border-image: linear-gradient(rgba(14, 153, 223, 0) 3%, #fff 97%);
+    -moz-border-image: -moz-linear-gradient(rgba(14, 153, 223, 0) 3%, #fff 97%);
+    -webkit-border-image: -webkit-linear-gradient(rgba(14, 153, 223, 0) 3%, #fff 97%);
+    border-image-slice: 1;
+}
+
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $whiteColor;
+    font-size: 10px;
+    span {
+        color: $goldColor;
+    }
+    a {
+        text-decoration: none;
+        display: block;
+        color: $whiteColor;
+        &:hover {
+            color: $hoverColor;
+            text-decoration: none;
+            transition: .5s;
+        }
+    }
+    .btn.active.focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn:active:focus,
+    .btn:focus,
+    .form-control.active.focus,
+    .form-control.active:focus,
+    .form-control.focus,
+    .form-control:active.focus,
+    .form-control:active:focus,
+    .form-control:focus {
+        outline: 0!important;
+        outline-color: transparent!important;
+        outline-width: 0!important;
+        outline-style: none!important;
+        box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
+    }
+    header {
+        position: absolute;
+        font-size: 1.4em;
+        width: 100%;
+        top: 0;
+        z-index: 99;
+        label {
+            margin-bottom: 0;
+        }
+        .navigation {
+            display: flex;
+            height: 7em;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid $borderColor;
+            .navbar-icon {
+                width: 30px;
+                cursor: pointer;
+            }
+            p {
+                margin-bottom: 0;
+                padding-left: 4em;
+            }
+        }
+        .callback {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            border-bottom: 1px solid $borderColor;
+            a {
+                text-transform: uppercase;
+                align-items: center;
+                display: flex;
+            }
+            div {
+                width: 54px;
+                padding: 8px;
+                margin-left: 4em;
+                border-radius: 50px;
+                border: 1px solid $borderColor;
+                animation: radial-pulse 1.5s infinite;
+                i {
+                    padding: 0.8em;
+                    cursor: pointer;
+                    border-radius: 50px;
+                    background-color: $borderColor;
+                    animation: radial-pulse 1.5s infinite;
+                }
+            }
+            @keyframes radial-pulse {
+                0% {
+                  box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
+                }
+                100% {
+                  box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+                }
+            }
+        }
+    }
+    #mobileMenu {
+        display: none;
+        &:checked ~ #menu {
+            top: 0;
+        }
+    }
+    #menu {
+        @include modal();
+        .container {
+            height: 100%;
+            .menu-items {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include gradientBorder();
+                    height: 20%;
+                    &:first-child {
+                        border: none;
+                    }
+                    h3 {
+                        text-transform: uppercase;
+                        letter-spacing: 0.3em;
+                        color: $whiteColor;
+                        font-size: 1.7em;
+                        font-weight: 400;
+                        &:hover {
+                            color: $goldColor;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #phoneModal {
+        display: none;
+        &:checked ~ #callModal {
+            top: 0;
+        }
+    }
+    #callModal {
+        @include modal();
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form {
+            .form-control {
+                @include formStyle();
+                color: $whiteColor;
+                border-bottom: 1px solid rgba(255,255,255, .5);
+            }
+        }
+        .btn-connect {
+            @include button();
+            img {
+                @include buttonImg();
+            }
+        }
+    }
+    #leftPanel {
+        position: absolute;
+        padding: 0 1em;
+        left: 0;
+        top: 0.8%;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        height: 90%;
+        width: 20px;
+        .logo {
+            img {
+                max-width: 10em;
+            }
+        }
+        .social {
+            display: flex;
+            flex-flow: column wrap;
+            .fab {
+                color: $goldColor;
+                font-size: 2em;
+                padding: 0.5em;
+                opacity: .5;
+                &:hover {
+                    opacity: 1;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+    #rightPanel {
+        position: absolute;
+        z-index: 99;
+        right: -9%;
+        top: 35%;
+        transform: rotate(-90deg);
+        font-size: 1.6em;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        opacity: 0.5;
+    }
+    section {
+        font-size: 1.8em;
+        position: relative;
+        .section-label {
+            display: none;
+            text-transform: uppercase;
+            transform: rotate(-90deg);
+            position: absolute;
+            letter-spacing: 0.2em;
+            font-size: 0.8em;
+            z-index: 999;
+            opacity: 0.5;
+            left: -2%;
+            top: 20em;
+        }
+    }
+    #home {
+        @include sectionBg(url(../img/back-sect-1.jpg));
+        h1{
+            @include sectionTitle('Bruno Ace', 8em);
+            line-height: 0.8em;
+            position: relative;
+            span {
+                position: absolute;
+                left: 35%;
+                top: 19%;
+                font-size: .18em;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 0.5em;
+            }
+        }
+        .bottom-panel {
+            @include bottomPanel();
+            form {
+                .form-control {
+                    @include formStyle();
+                }
+            }
+            .btn-connect {
+                @include button();
+                img {
+                    @include buttonImg();
+                }
+            }
+        }
+    }
+    
+    /*   Thank page   */
+    #main {
+        @include sectionBg(url(../img/player-bg.jpg));
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            h1 {
+                @include sectionTitle('Open Sans', 3em);
+                text-align: center;
+            }
+            .btn-connect {
+                @include button();
+                margin-top: 10em;
+                img {
+                    @include buttonImg();
+                    transform: rotate(180deg);
+                    margin-right: 1em;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    #about {
+        @include sectionBg(url(../img/about-bg.jpg));
+        .about-title {
+            margin-bottom: 4em;
+            h2 {
+                @include sectionTitle('Open Sans', 3em);
+            }
+            span {
+                font-size: 1.2em;
+            }
+        }
+        .about-description {
+            padding-left: 45%;
+            text-align: right;
+            span {
+                text-transform: uppercase;
+            }
+        }
+    }
+    #player {
+        @include sectionBg(url(../img/player-bg.jpg));
+        .container {
+            .peolple {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                .boytcov-desc,
+                .djemma-desc,
+                .taron-desc,
+                .maloletov-desc,
+                .skobeyko-desc {
+                    // opacity: 0;
+                    position: absolute;
+                    bottom: -999px;
+                }
+            }
+            .boytcov,
+            .djemma,
+            .taron,
+            .maloletov,
+            .skobeyko {
+                &:hover + .bottom-panel {
+                    position: absolute;
+                    transition: 0.5s;
+                    z-index: 999;
+                    opacity: 1;
+                    bottom: 0;
+                    right: 0;
+                }
+
+            }
+            .player-photo {
+                padding: 0;
+                height: 370px;
+                overflow: hidden;
+                img {
+                    max-width: 100%;
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+        .bottom-panel {
+            @include bottomPanel();
+            color: $blackColor;
+            form {
+                .form-control {
+                    @include formStyle();
+                }
+            }
+            .btn-connect {
+                @include button();
+                img {
+                    @include buttonImg();
+                }
+            }
+            h3 {
+                text-transform: uppercase;
+                color: $goldColor;
+                font-size: 1.4em;
+            }
+            i {
+                color: $goldColor;
+                font-size: 1.2em;
+                float: right;
+                margin: 0 0.5em;
+            }
+        }
+    }
+    #pricing {
+        .container {
+            display: flex;
+            align-items: stretch;
+            max-width: 100%;
+            height: 100%;
+            padding: 0;
+            margin-left: 15px;
+            .price {
+                width: 100%;
+                .price-item {
+                    padding: 5em;
+                    display: flex;
+                    flex-flow: column wrap;
+                    align-items: center;
+                    justify-content: center;
+                    @include gradientBorder();
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.5s;
+                    }
+                    &:first-child {
+                        border: none;
+                    }
+                    h2 {
+                        @include sectionTitle('Bruno Ace', 2em);
+                        font-weight: 700;
+                    }
+                    .price-desc {
+                        display: none;
+                        transition: 1s;
+                        p {
+                            margin: 2em 0;
+                        }
+                        .btn-connect {
+                            @include button();
+                            margin-bottom: 1em;
+                            img {
+                                @include buttonImg();
+                            }
+                        }
+                    }
+                    &:hover > div {
+                        display: block;
+                    }
+                    &:hover > h2 {
+                        color: $goldColor;
+                        border-bottom: 1px solid $goldColor;
+                        transition: 0.5s;
+                    }
+                    h3 {
+                        @include sectionTitle('Bruno Ace', 1.7em);
+                        color: $goldColor;
+                    }
+                }
+                .elite {
+                    @include sectionBg(url(../img/elite-bg.jpg));
+                }
+                .vip {
+                    @include sectionBg(url(../img/vip-bg.jpg));
+                }
+                .extra {
+                    @include sectionBg(url(../img/extra-bg.jpg));
+                }
+            }
+        }
+    }
+    #grafick {
+        @include sectionBg(url(../img/grafick-bg.jpg));
+        .grafick-info {
+            padding: 1em 2.5em;
+            &:first-child > span {
+                margin-right: 1.25em;
+            }
+            span {
+                float: left;
+                font-size: 2em;
+                font-family: 'Bruno Ace', sans-serif;
+                border-bottom: 3px solid transparent;
+                @include gradientBorder();
+                margin-right: 0.9em;
+                padding-left: 0.5em;
+            }
+            .data {
+                float: right;
+                color: $goldColor;
+            }
+            h3 {
+                @include sectionTitle('Open Sans', 1.2em);
+                padding-left: 1em;
+                cursor: pointer;
+            }
+            .invite {
+                font-size: 0.9em;
+                transition: 0.5s;
+                opacity: 0.4;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .bottom-panel {
+            @include bottomPanel();
+            form {
+                .form-control {
+                    @include formStyle();
+                }
+            }
+            .btn-connect {
+                @include button();
+                img {
+                    @include buttonImg();
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/fav.png" type="image/png">
+    <title>Бизнес игра Insider</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <nav id="nav-menu phone" class="navigation col-md-9">
+                    <label for="mobileMenu"><img src="img/navbars.png" alt="кнопка меню" class="navbar-icon"></label>
+                    <p>8 (812) 123 45 67</p>
+                </nav>
+                <div class="callback col-md-3">
+                    <a href="tel:88121234567"><span>Заказать звонок</span></a><div><label for="phoneModal"><i class="fas fa-phone-alt"></i></label></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <input type="checkbox" id="mobileMenu">
+    <div id="menu">
+        <div class="container">
+            <div class="row menu-items">
+                <div class="col-md-3">
+                    <a href="#">
+                        <h3>Правила игры</h3>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <h3>Crown Club</h3>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <h3>Участники</h3>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <h3>Тарифы</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="phoneModal">
+    <div id="callModal">
+        <form id="call-form">
+            <div class="form-group">
+                <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+            </div>
+            <div class="form-group">
+                <input type="phone" class="form-control" id="phone" placeholder="Ваш телефон">
+            </div>
+            <button type="submit" class="btn btn-connect">Заказать звонок<img src="img/r-arrow.ico" type="icon" alt=""></button>
+        </form>
+    </div>
+    <div id="leftPanel">
+        <div class="logo">
+            <img src="img/crown-club.png" alt="">
+        </div>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <div id="rightPanel">
+        <p>Бизнес клуб <span>Crown club</span></p>
+    </div>
+    <div id="fullpage">
+        <section id="main" class="section">
+            <div class="container">
+                <h1>Спасибо за вашу заявку</h1>
+                <p class="label">Наш менеджер свяжется с вами в ближайшее время.</p>
+                <a href="index.html"><button type="submit" class="btn btn-connect"><img src="img/r-arrow.ico" type="icon" alt="">Вернуться на главную</button></a>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/bfb0265f6e.js" crossorigin="anonymous"></script>
+</body>
+</html>
