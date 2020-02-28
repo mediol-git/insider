@@ -53,12 +53,12 @@
     </div>
     <input type="checkbox" id="phoneModal">
     <div id="callModal">
-        <form id="call-form">
+        <form id="call-form" action="mail.php" method="POST">
             <div class="form-group">
-                <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+                <input type="name" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
             </div>
             <div class="form-group">
-                <input type="phone" class="form-control" id="phone" placeholder="Ваш телефон">
+                <input type="phone" name="phone" class="form-control" id="phone" placeholder="Ваш телефон">
             </div>
             <button type="submit" class="btn btn-connect">Заказать звонок<img src="img/r-arrow.ico" type="icon" alt=""></button>
         </form>
