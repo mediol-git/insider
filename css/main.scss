@@ -29,7 +29,7 @@ $borderColor: rgba(255,255,255, .15);
 }
 
 @mixin bottomPanel {
-    background-color: $whiteColor;
+    background-color: $borderColor;
     position: absolute;
     width: 620px;
     height: 340px;
@@ -386,15 +386,6 @@ body {
                 display: flex;
                 flex-wrap: wrap;
                 position: relative;
-                .boytcov-desc,
-                .djemma-desc,
-                .taron-desc,
-                .maloletov-desc,
-                .skobeyko-desc {
-                    // opacity: 0;
-                    position: absolute;
-                    bottom: -999px;
-                }
             }
             .boytcov,
             .djemma,
@@ -404,8 +395,8 @@ body {
                 &:hover + .bottom-panel {
                     position: absolute;
                     transition: 0.5s;
+                    display: block;
                     z-index: 999;
-                    opacity: 1;
                     bottom: 0;
                     right: 0;
                 }

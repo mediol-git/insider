@@ -389,7 +389,7 @@ body #home h1 span {
 }
 
 body #home .bottom-panel {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
   position: absolute;
   width: 620px;
   height: 340px;
@@ -517,15 +517,6 @@ body #player .container .peolple {
   position: relative;
 }
 
-body #player .container .peolple .boytcov-desc,
-body #player .container .peolple .djemma-desc,
-body #player .container .peolple .taron-desc,
-body #player .container .peolple .maloletov-desc,
-body #player .container .peolple .skobeyko-desc {
-  position: absolute;
-  bottom: -999px;
-}
-
 body #player .container .boytcov:hover + .bottom-panel,
 body #player .container .djemma:hover + .bottom-panel,
 body #player .container .taron:hover + .bottom-panel,
@@ -534,8 +525,8 @@ body #player .container .skobeyko:hover + .bottom-panel {
   position: absolute;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  display: block;
   z-index: 999;
-  opacity: 1;
   bottom: 0;
   right: 0;
 }
@@ -559,7 +550,7 @@ body #player .container .player-photo img:hover {
 }
 
 body #player .bottom-panel {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
   position: absolute;
   width: 620px;
   height: 340px;
@@ -783,7 +774,7 @@ body #grafick .grafick-info .invite:hover {
 }
 
 body #grafick .bottom-panel {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
   position: absolute;
   width: 620px;
   height: 340px;

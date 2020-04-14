@@ -55,10 +55,10 @@
     <div id="callModal">
         <form id="call-form" action="mail.php" method="POST">
             <div class="form-group">
-                <input type="name" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+                <input type="name" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя" required>
             </div>
             <div class="form-group">
-                <input type="phone" name="phone" class="form-control" id="phone" placeholder="Ваш телефон">
+                <input type="phone" name="phone" class="form-control" id="phone" placeholder="Ваш телефон" required>
             </div>
             <button type="submit" class="btn btn-connect">Заказать звонок<img src="img/r-arrow.ico" type="icon" alt=""></button>
         </form>
@@ -83,12 +83,12 @@
                 <h1>The <span>Бизнес игра</span>Insider</h1>
             </div>
             <div class="bottom-panel">
-                <form id="home-form">
+                <form id="home-form" action="mail.php" method="POST">
                     <div class="form-group">
-                        <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+                        <input type="name" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя" required>
                     </div>
                     <div class="form-group">
-                        <input type="phone" class="form-control" id="phone" placeholder="Ваш телефон">
+                        <input type="phone" name="phone" class="form-control" id="phone" placeholder="Ваш телефон" required>
                     </div>
                     <button type="submit" class="btn btn-connect">Начать игру<img src="img/r-arrow.ico" type="icon" alt=""></button>
                 </form>
@@ -160,12 +160,12 @@
                         </div>
                     </div>
                     <div class="bottom-panel">
-                        <form id="player-form">
+                        <form id="player-form" action="mail.php" method="POST">
                             <div class="form-group">
-                                <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+                                <input type="name" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя" required>
                             </div>
                             <div class="form-group">
-                                <input type="phone" class="form-control" id="phone" placeholder="Ваш телефон">
+                                <input type="phone" name="phone" class="form-control" id="phone" placeholder="Ваш телефон" required>
                             </div>
                             <button type="submit" class="btn btn-connect">Вступить в клуб <img src="img/r-arrow.ico" type="icon" alt=""></button>
                         </form>
@@ -241,12 +241,12 @@
                 </div>
             </div>
             <div class="bottom-panel">
-                <form id="home-form">
+                <form id="home-form" action="mail.php" method="POST">
                     <div class="form-group">
-                        <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+                        <input type="name" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя" required>
                     </div>
                     <div class="form-group">
-                        <input type="phone" class="form-control" id="phone" placeholder="Ваш телефон">
+                        <input type="phone" name="phone" class="form-control" id="phone" placeholder="Ваш телефон" required>
                     </div>
                     <button type="submit" class="btn btn-connect">Хочу на ивент<img src="img/r-arrow.ico" type="icon" alt=""></button>
                 </form>
